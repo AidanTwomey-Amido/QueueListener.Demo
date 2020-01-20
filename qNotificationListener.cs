@@ -7,7 +7,7 @@ namespace QueueListener
 {
     public static class qNotificationListener
     {
-        private const string API_KEY = "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";
+        private const string API_KEY = "<sendgrid-api-key-here>"; // todo: pass in as env variable
 
         [FunctionName("qNotificationListener")]
         public static async Task RunAsync([ServiceBusTrigger("notifications-aidan", Connection = "ConnString")]string myQueueItem, ILogger log)
